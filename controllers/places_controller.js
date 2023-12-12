@@ -14,7 +14,9 @@ places.get('/', (req, res) => {
 
 // SHOW
 places.get('/:arrayIndex', (req, res) => {
-    res.send(Place[req.params.arrayIndex])
+    res.render('Show', {
+        place: Place[req.params.arrayIndex]
+    })
 })
 
 module.exports = places
